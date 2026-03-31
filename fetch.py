@@ -5,7 +5,9 @@ Uses linkedin-jobs-api2.p.rapidapi.com (active 2025)
 
 import http.client
 import json
-from config import RAPIDAPI_KEY
+import os
+
+RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY")
 
 
 def fetch_jobs(keyword: str, location: str = "India", limit: int = 10) -> list:

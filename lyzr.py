@@ -11,7 +11,9 @@ import datetime
 import hashlib
 import requests
 
-from config import Lyzr_API_KEY
+import os
+
+Lyzr_API_KEY = os.getenv("LYZR_API_KEY", "dummy")
 
 _SYSTEM_PROMPT = """
 You are an expert LinkedIn job-post parser.
